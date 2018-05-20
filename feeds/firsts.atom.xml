@@ -1,0 +1,1226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>The Mad Data Scientist</title><link href="themaddatascientist/" rel="alternate"></link><link href="themaddatascientist/feeds/firsts.atom.xml" rel="self"></link><id>themaddatascientist/</id><updated>2018-05-19T21:00:00-05:00</updated><entry><title>First Post</title><link href="themaddatascientist/first-post.html" rel="alternate"></link><published>2018-05-19T21:00:00-05:00</published><updated>2018-05-19T21:00:00-05:00</updated><author><name>Madeline Hamilton</name></author><id>tag:,2018-05-19:themaddatascientist/first-post.html</id><summary type="html">&lt;style type="text/css"&gt;/*!
+*
+* IPython notebook
+*
+*/
+/* CSS font colors for translated ANSI colors. */
+.ansibold {
+  font-weight: bold;
+}
+/* use dark versions for foreground, to improve visibility */
+.ansiblack {
+  color: black;
+}
+.ansired {
+  color: darkred;
+}
+.ansigreen {
+  color: darkgreen;
+}
+.ansiyellow {
+  color: #c4a000;
+}
+.ansiblue {
+  color: darkblue;
+}
+.ansipurple {
+  color: darkviolet;
+}
+.ansicyan {
+  color: steelblue;
+}
+.ansigray {
+  color: gray;
+}
+/* and light for background, for the same reason */
+.ansibgblack {
+  background-color: black;
+}
+.ansibgred {
+  background-color: red;
+}
+.ansibggreen {
+  background-color: green;
+}
+.ansibgyellow {
+  background-color: yellow;
+}
+.ansibgblue {
+  background-color: blue;
+}
+.ansibgpurple {
+  background-color: magenta;
+}
+.ansibgcyan {
+  background-color: cyan;
+}
+.ansibggray {
+  background-color: gray;
+}
+div.cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border-radius: 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  width: 100%;
+  padding: 5px;
+  /* This acts as a spacer between cells, that is outside the border */
+  margin: 0px;
+  outline: none;
+  border-left-width: 1px;
+  padding-left: 5px;
+  background: linear-gradient(to right, transparent -40px, transparent 1px, transparent 1px, transparent 100%);
+}
+div.cell.jupyter-soft-selected {
+  border-left-color: #90CAF9;
+  border-left-color: #E3F2FD;
+  border-left-width: 1px;
+  padding-left: 5px;
+  border-right-color: #E3F2FD;
+  border-right-width: 1px;
+  background: #E3F2FD;
+}
+@media print {
+  div.cell.jupyter-soft-selected {
+    border-color: transparent;
+  }
+}
+div.cell.selected {
+  border-color: #ababab;
+  border-left-width: 0px;
+  padding-left: 6px;
+  background: linear-gradient(to right, #42A5F5 -40px, #42A5F5 5px, transparent 5px, transparent 100%);
+}
+@media print {
+  div.cell.selected {
+    border-color: transparent;
+  }
+}
+div.cell.selected.jupyter-soft-selected {
+  border-left-width: 0;
+  padding-left: 6px;
+  background: linear-gradient(to right, #42A5F5 -40px, #42A5F5 7px, #E3F2FD 7px, #E3F2FD 100%);
+}
+.edit_mode div.cell.selected {
+  border-color: #66BB6A;
+  border-left-width: 0px;
+  padding-left: 6px;
+  background: linear-gradient(to right, #66BB6A -40px, #66BB6A 5px, transparent 5px, transparent 100%);
+}
+@media print {
+  .edit_mode div.cell.selected {
+    border-color: transparent;
+  }
+}
+.prompt {
+  /* This needs to be wide enough for 3 digit prompt numbers: In[100]: */
+  min-width: 14ex;
+  /* This padding is tuned to match the padding on the CodeMirror editor. */
+  padding: 0.4em;
+  margin: 0px;
+  font-family: monospace;
+  text-align: right;
+  /* This has to match that of the the CodeMirror class line-height below */
+  line-height: 1.21429em;
+  /* Don't highlight prompt number selection */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Use default cursor */
+  cursor: default;
+}
+@media (max-width: 540px) {
+  .prompt {
+    text-align: left;
+  }
+}
+div.inner_cell {
+  min-width: 0;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  /* Old browsers */
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* Modern browsers */
+  flex: 1;
+}
+/* input_area and input_prompt must match in top border and margin for alignment */
+div.input_area {
+  border: 1px solid #cfcfcf;
+  border-radius: 2px;
+  background: #f7f7f7;
+  line-height: 1.21429em;
+}
+/* This is needed so that empty prompt areas can collapse to zero height when there
+   is no content in the output_subarea and the prompt. The main purpose of this is
+   to make sure that empty JavaScript output_subareas have no height. */
+div.prompt:empty {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+div.unrecognized_cell {
+  padding: 5px 5px 5px 0px;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+div.unrecognized_cell .inner_cell {
+  border-radius: 2px;
+  padding: 5px;
+  font-weight: bold;
+  color: red;
+  border: 1px solid #cfcfcf;
+  background: #eaeaea;
+}
+div.unrecognized_cell .inner_cell a {
+  color: inherit;
+  text-decoration: none;
+}
+div.unrecognized_cell .inner_cell a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+@media (max-width: 540px) {
+  div.unrecognized_cell &gt; div.prompt {
+    display: none;
+  }
+}
+div.code_cell {
+  /* avoid page breaking on code cells when printing */
+}
+@media print {
+  div.code_cell {
+    page-break-inside: avoid;
+  }
+}
+/* any special styling for code cells that are currently running goes here */
+div.input {
+  page-break-inside: avoid;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.input {
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+/* input_area and input_prompt must match in top border and margin for alignment */
+div.input_prompt {
+  color: #303F9F;
+  border-top: 1px solid transparent;
+}
+div.input_area &gt; div.highlight {
+  margin: 0.4em;
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+}
+div.input_area &gt; div.highlight &gt; pre {
+  margin: 0px;
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+}
+/* The following gets added to the &lt;head&gt; if it is detected that the user has a
+ * monospace font with inconsistent normal/bold/italic height.  See
+ * notebookmain.js.  Such fonts will have keywords vertically offset with
+ * respect to the rest of the text.  The user should select a better font.
+ * See: https://github.com/ipython/ipython/issues/1503
+ *
+ * .CodeMirror span {
+ *      vertical-align: bottom;
+ * }
+ */
+.CodeMirror {
+  line-height: 1.21429em;
+  /* Changed from 1em to our global default */
+  font-size: 14px;
+  height: auto;
+  /* Changed to auto to autogrow */
+  background: none;
+  /* Changed from white to allow our bg to show through */
+}
+.CodeMirror-scroll {
+  /*  The CodeMirror docs are a bit fuzzy on if overflow-y should be hidden or visible.*/
+  /*  We have found that if it is visible, vertical scrollbars appear with font size changes.*/
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.CodeMirror-lines {
+  /* In CM2, this used to be 0.4em, but in CM3 it went to 4px. We need the em value because */
+  /* we have set a different line-height and want this to scale with that. */
+  padding: 0.4em;
+}
+.CodeMirror-linenumber {
+  padding: 0 8px 0 4px;
+}
+.CodeMirror-gutters {
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+}
+.CodeMirror pre {
+  /* In CM3 this went to 4px from 0 in CM2. We need the 0 value because of how we size */
+  /* .CodeMirror-lines */
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+}
+/*
+
+Original style from softwaremaniacs.org (c) Ivan Sagalaev &lt;Maniac@SoftwareManiacs.Org&gt;
+Adapted from GitHub theme
+
+*/
+.highlight-base {
+  color: #000;
+}
+.highlight-variable {
+  color: #000;
+}
+.highlight-variable-2 {
+  color: #1a1a1a;
+}
+.highlight-variable-3 {
+  color: #333333;
+}
+.highlight-string {
+  color: #BA2121;
+}
+.highlight-comment {
+  color: #408080;
+  font-style: italic;
+}
+.highlight-number {
+  color: #080;
+}
+.highlight-atom {
+  color: #88F;
+}
+.highlight-keyword {
+  color: #008000;
+  font-weight: bold;
+}
+.highlight-builtin {
+  color: #008000;
+}
+.highlight-error {
+  color: #f00;
+}
+.highlight-operator {
+  color: #AA22FF;
+  font-weight: bold;
+}
+.highlight-meta {
+  color: #AA22FF;
+}
+/* previously not defined, copying from default codemirror */
+.highlight-def {
+  color: #00f;
+}
+.highlight-string-2 {
+  color: #f50;
+}
+.highlight-qualifier {
+  color: #555;
+}
+.highlight-bracket {
+  color: #997;
+}
+.highlight-tag {
+  color: #170;
+}
+.highlight-attribute {
+  color: #00c;
+}
+.highlight-header {
+  color: blue;
+}
+.highlight-quote {
+  color: #090;
+}
+.highlight-link {
+  color: #00c;
+}
+/* apply the same style to codemirror */
+.cm-s-ipython span.cm-keyword {
+  color: #008000;
+  font-weight: bold;
+}
+.cm-s-ipython span.cm-atom {
+  color: #88F;
+}
+.cm-s-ipython span.cm-number {
+  color: #080;
+}
+.cm-s-ipython span.cm-def {
+  color: #00f;
+}
+.cm-s-ipython span.cm-variable {
+  color: #000;
+}
+.cm-s-ipython span.cm-operator {
+  color: #AA22FF;
+  font-weight: bold;
+}
+.cm-s-ipython span.cm-variable-2 {
+  color: #1a1a1a;
+}
+.cm-s-ipython span.cm-variable-3 {
+  color: #333333;
+}
+.cm-s-ipython span.cm-comment {
+  color: #408080;
+  font-style: italic;
+}
+.cm-s-ipython span.cm-string {
+  color: #BA2121;
+}
+.cm-s-ipython span.cm-string-2 {
+  color: #f50;
+}
+.cm-s-ipython span.cm-meta {
+  color: #AA22FF;
+}
+.cm-s-ipython span.cm-qualifier {
+  color: #555;
+}
+.cm-s-ipython span.cm-builtin {
+  color: #008000;
+}
+.cm-s-ipython span.cm-bracket {
+  color: #997;
+}
+.cm-s-ipython span.cm-tag {
+  color: #170;
+}
+.cm-s-ipython span.cm-attribute {
+  color: #00c;
+}
+.cm-s-ipython span.cm-header {
+  color: blue;
+}
+.cm-s-ipython span.cm-quote {
+  color: #090;
+}
+.cm-s-ipython span.cm-link {
+  color: #00c;
+}
+.cm-s-ipython span.cm-error {
+  color: #f00;
+}
+.cm-s-ipython span.cm-tab {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAMCAYAAAAkuj5RAAAAAXNSR0IArs4c6QAAAGFJREFUSMft1LsRQFAQheHPowAKoACx3IgEKtaEHujDjORSgWTH/ZOdnZOcM/sgk/kFFWY0qV8foQwS4MKBCS3qR6ixBJvElOobYAtivseIE120FaowJPN75GMu8j/LfMwNjh4HUpwg4LUAAAAASUVORK5CYII=);
+  background-position: right;
+  background-repeat: no-repeat;
+}
+div.output_wrapper {
+  /* this position must be relative to enable descendents to be absolute within it */
+  position: relative;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  z-index: 1;
+}
+/* class for the output area when it should be height-limited */
+div.output_scroll {
+  /* ideally, this would be max-height, but FF barfs all over that */
+  height: 24em;
+  /* FF needs this *and the wrapper* to specify full width, or it will shrinkwrap */
+  width: 100%;
+  overflow: auto;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+  display: block;
+}
+/* output div while it is collapsed */
+div.output_collapsed {
+  margin: 0px;
+  padding: 0px;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+div.out_prompt_overlay {
+  height: 100%;
+  padding: 0px 0.4em;
+  position: absolute;
+  border-radius: 2px;
+}
+div.out_prompt_overlay:hover {
+  /* use inner shadow to get border that is computed the same on WebKit/FF */
+  -webkit-box-shadow: inset 0 0 1px #000;
+  box-shadow: inset 0 0 1px #000;
+  background: rgba(240, 240, 240, 0.5);
+}
+div.output_prompt {
+  color: #D84315;
+}
+/* This class is the outer container of all output sections. */
+div.output_area {
+  padding: 0px;
+  page-break-inside: avoid;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+div.output_area .MathJax_Display {
+  text-align: left !important;
+}
+div.output_area 
+div.output_area 
+div.output_area img,
+div.output_area svg {
+  max-width: 100%;
+  height: auto;
+}
+div.output_area img.unconfined,
+div.output_area svg.unconfined {
+  max-width: none;
+}
+/* This is needed to protect the pre formating from global settings such
+   as that of bootstrap */
+.output {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.output_area {
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+div.output_area pre {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  color: black;
+  background-color: transparent;
+  border-radius: 0;
+}
+/* This class is for the output subarea inside the output_area and after
+   the prompt div. */
+div.output_subarea {
+  overflow-x: auto;
+  padding: 0.4em;
+  /* Old browsers */
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* Modern browsers */
+  flex: 1;
+  max-width: calc(100% - 14ex);
+}
+div.output_scroll div.output_subarea {
+  overflow-x: visible;
+}
+/* The rest of the output_* classes are for special styling of the different
+   output types */
+/* all text output has this class: */
+div.output_text {
+  text-align: left;
+  color: #000;
+  /* This has to match that of the the CodeMirror class line-height below */
+  line-height: 1.21429em;
+}
+/* stdout/stderr are 'text' as well as 'stream', but execute_result/error are *not* streams */
+div.output_stderr {
+  background: #fdd;
+  /* very light red background for stderr */
+}
+div.output_latex {
+  text-align: left;
+}
+/* Empty output_javascript divs should have no height */
+div.output_javascript:empty {
+  padding: 0;
+}
+.js-error {
+  color: darkred;
+}
+/* raw_input styles */
+div.raw_input_container {
+  line-height: 1.21429em;
+  padding-top: 5px;
+}
+pre.raw_input_prompt {
+  /* nothing needed here. */
+}
+input.raw_input {
+  font-family: monospace;
+  font-size: inherit;
+  color: inherit;
+  width: auto;
+  /* make sure input baseline aligns with prompt */
+  vertical-align: baseline;
+  /* padding + margin = 0.5em between prompt and cursor */
+  padding: 0em 0.25em;
+  margin: 0em 0.25em;
+}
+input.raw_input:focus {
+  box-shadow: none;
+}
+p.p-space {
+  margin-bottom: 10px;
+}
+div.output_unrecognized {
+  padding: 5px;
+  font-weight: bold;
+  color: red;
+}
+div.output_unrecognized a {
+  color: inherit;
+  text-decoration: none;
+}
+div.output_unrecognized a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+.rendered_html {
+  color: #000;
+  /* any extras will just be numbers: */
+}
+
+
+
+.rendered_html :link {
+  text-decoration: underline;
+}
+.rendered_html :visited {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+.rendered_html h1:first-child {
+  margin-top: 0.538em;
+}
+.rendered_html h2:first-child {
+  margin-top: 0.636em;
+}
+.rendered_html h3:first-child {
+  margin-top: 0.777em;
+}
+.rendered_html h4:first-child {
+  margin-top: 1em;
+}
+.rendered_html h5:first-child {
+  margin-top: 1em;
+}
+.rendered_html h6:first-child {
+  margin-top: 1em;
+}
+
+
+
+
+
+
+
+
+.rendered_html * + ul {
+  margin-top: 1em;
+}
+.rendered_html * + ol {
+  margin-top: 1em;
+}
+
+
+.rendered_html pre,
+
+
+
+.rendered_html tr,
+.rendered_html th,
+
+.rendered_html td,
+
+
+.rendered_html * + table {
+  margin-top: 1em;
+}
+
+.rendered_html * + p {
+  margin-top: 1em;
+}
+
+.rendered_html * + img {
+  margin-top: 1em;
+}
+.rendered_html img,
+
+.rendered_html img.unconfined,
+
+div.text_cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.text_cell &gt; div.prompt {
+    display: none;
+  }
+}
+div.text_cell_render {
+  /*font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;*/
+  outline: none;
+  resize: none;
+  width: inherit;
+  border-style: none;
+  padding: 0.5em 0.5em 0.5em 0.4em;
+  color: #000;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+a.anchor-link:link {
+  text-decoration: none;
+  padding: 0px 20px;
+  visibility: hidden;
+}
+h1:hover .anchor-link,
+h2:hover .anchor-link,
+h3:hover .anchor-link,
+h4:hover .anchor-link,
+h5:hover .anchor-link,
+h6:hover .anchor-link {
+  visibility: visible;
+}
+.text_cell.rendered .input_area {
+  display: none;
+}
+.text_cell.rendered 
+.text_cell.unrendered .text_cell_render {
+  display: none;
+}
+.cm-header-1,
+.cm-header-2,
+.cm-header-3,
+.cm-header-4,
+.cm-header-5,
+.cm-header-6 {
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.cm-header-1 {
+  font-size: 185.7%;
+}
+.cm-header-2 {
+  font-size: 157.1%;
+}
+.cm-header-3 {
+  font-size: 128.6%;
+}
+.cm-header-4 {
+  font-size: 110%;
+}
+.cm-header-5 {
+  font-size: 100%;
+  font-style: italic;
+}
+.cm-header-6 {
+  font-size: 100%;
+  font-style: italic;
+}
+&lt;/style&gt;
+&lt;style type="text/css"&gt;.highlight .hll { background-color: #ffffcc }
+.highlight  { background: #f8f8f8; }
+.highlight .c { color: #408080; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #008000; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #BC7A00 } /* Comment.Preproc */
+.highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0044DD } /* Generic.Traceback */
+.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #008000 } /* Keyword.Pseudo */
+.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #B00040 } /* Keyword.Type */
+.highlight .m { color: #666666 } /* Literal.Number */
+.highlight .s { color: #BA2121 } /* Literal.String */
+.highlight .na { color: #7D9029 } /* Name.Attribute */
+.highlight .nb { color: #008000 } /* Name.Builtin */
+.highlight .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.highlight .no { color: #880000 } /* Name.Constant */
+.highlight .nd { color: #AA22FF } /* Name.Decorator */
+.highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #0000FF } /* Name.Function */
+.highlight .nl { color: #A0A000 } /* Name.Label */
+.highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #19177C } /* Name.Variable */
+.highlight .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mb { color: #666666 } /* Literal.Number.Bin */
+.highlight .mf { color: #666666 } /* Literal.Number.Float */
+.highlight .mh { color: #666666 } /* Literal.Number.Hex */
+.highlight .mi { color: #666666 } /* Literal.Number.Integer */
+.highlight .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
+.highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
+.highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #BA2121 } /* Literal.String.Double */
+.highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.highlight .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.highlight .sx { color: #008000 } /* Literal.String.Other */
+.highlight .sr { color: #BB6688 } /* Literal.String.Regex */
+.highlight .s1 { color: #BA2121 } /* Literal.String.Single */
+.highlight .ss { color: #19177C } /* Literal.String.Symbol */
+.highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #0000FF } /* Name.Function.Magic */
+.highlight .vc { color: #19177C } /* Name.Variable.Class */
+.highlight .vg { color: #19177C } /* Name.Variable.Global */
+.highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .vm { color: #19177C } /* Name.Variable.Magic */
+.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */&lt;/style&gt;
+&lt;style type="text/css"&gt;
+/* Temporary definitions which will become obsolete with Notebook release 5.0 */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-bold { font-weight: bold; }
+&lt;/style&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [35]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;scipy&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;sp&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;scipy.linalg&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy.linalg&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.pylab&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;plt&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;scipy.sparse&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;sps&lt;/span&gt;
+
+&lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ones&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;16&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;e&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ones&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;f&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ones&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;12&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;A&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;diag&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;diag&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;diag&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;diag&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;diag&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+&lt;div class="output_area"&gt;
+&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;[[ 4. -1.  0.  0. -1.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [-1.  4. -1.  0.  0. -1.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0. -1.  4. -1.  0.  0. -1.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0. -1.  4. -1.  0.  0. -1.  0.  0.  0.  0.  0.  0.  0.  0.]
+ [-1.  0.  0. -1.  4. -1.  0.  0. -1.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0. -1.  0.  0. -1.  4. -1.  0.  0. -1.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0. -1.  0.  0. -1.  4. -1.  0.  0. -1.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0. -1.  0.  0. -1.  4. -1.  0.  0. -1.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0. -1.  0.  0. -1.  4. -1.  0.  0. -1.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0. -1.  0.  0. -1.  4. -1.  0.  0. -1.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0. -1.  0.  0. -1.  4. -1.  0.  0. -1.  0.]
+ [ 0.  0.  0.  0.  0.  0.  0. -1.  0.  0. -1.  4. -1.  0.  0. -1.]
+ [ 0.  0.  0.  0.  0.  0.  0.  0. -1.  0.  0. -1.  4. -1.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.  0.  0.  0. -1.  0.  0. -1.  4. -1.  0.]
+ [ 0.  0.  0.  0.  0.  0.  0.  0.  0.  0. -1.  0.  0. -1.  4. -1.]
+ [ 0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0. -1.  0.  0. -1.  4.]]
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;There will be n + 2(n-1) + 2(n-4) non-zero elements. There are n diagonal elements, which are all nonzero. The sub and super diagonals each have n-1 elements, which are all nonzero, and the 4th super and sub diagonals each have n-4 elements, all of which are nonzero. Summing these results in the expression above&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [38]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;L&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;U&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;linalg&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;lu&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"Visualizing A:"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;M&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sps&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;csr_matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;spy&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"Visualizing L:"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;M&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sps&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;csr_matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;L&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;spy&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"Visualizing U:"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;M&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sps&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;csr_matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;U&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;spy&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"Visualizing P:"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;M&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sps&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;csr_matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;spy&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"Number of nonzero elements in L:"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;count_nonzero&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;L&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"Number of nonzero elements in U:"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;count_nonzero&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;U&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+&lt;div class="output_area"&gt;
+&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;Visualizing A:
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="output_area"&gt;
+&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_png output_subarea "&gt;
+&lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAP8AAAD8CAYAAAC4nHJkAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAADl0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uIDIuMS4xLCBodHRwOi8vbWF0cGxvdGxpYi5vcmcvAOZPmwAADhJJREFUeJzt3W+MZXV9x/H3t6xUFzRAF/zDQgcNwRpCC9k0qI1tRBqKBHjQBxgx22rCk7ai0SCEpk2TPmii8U/SRkMAJZXgA0QlRC0b1JgmStxd+b9UqCIsru4QW7WaFDZ+++DeqbuTXe7MOed37jnn934lk5l775n7/e3Z+cy598z93m9kJpLq81vLXoCk5TD8UqUMv1Qpwy9VyvBLlTL8UqWWHv6IuCQi/iMinoyI6wvWOSMivh4R+yLi0Yi4tlStw2oeFxHfjYh7eqh1UkTcGRGPz/+NbyxY6/3zffhIRNwRES/t8L5vjYiDEfHIYdedEhG7IuKJ+eeTC9f78Hw/PhQRX4iIk0rVOuy2D0ZERsS2LmptxFLDHxHHAf8C/BnwBuAdEfGGQuUOAR/IzN8DLgT+qmCtNdcC+wrXWPMJ4KuZ+Xrg90vVjYjTgfcCOzLzXOA44KoOS3wGuGTdddcD92Xm2cB988sl6+0Czs3M84DvATcUrEVEnAFcDDzdUZ0NWfaR/w+BJzPz+5n5PPA54IoShTLzQGbunX/9C2bhOL1ELYCI2A68Hbi5VI3Dar0CeAtwC0BmPp+Z/12w5BbgZRGxBdgK/KirO87MbwI/XXf1FcBt869vA64sWS8z783MQ/OL3wa2l6o19zHgOqDXV9wtO/ynA88cdnk/BQO5JiJWgPOB+wuW+Tiz/9BfF6yx5rXAKvDp+dOMmyPihBKFMvNZ4CPMjlIHgJ9l5r0lah3mlZl5YF7/AHBa4XqHezfwlVJ3HhGXA89m5oOlahzLssMfR7mu6G+/iDgR+Dzwvsz8eaEalwEHM3NPifs/ii3ABcAnM/N84Jd0+9D4/82fb18BnAW8BjghIq4uUWvZIuJGZk8Xby90/1uBG4G/K3H/iyw7/PuBMw67vJ0OH0KuFxEvYRb82zPzrlJ1gDcDl0fEU8yeyrw1Ij5bsN5+YH9mrj2SuZPZL4MS3gb8IDNXM/MF4C7gTYVqrflJRLwaYP75YOF6RMRO4DLgnVmuAeZ1zH6JPjj/WdkO7I2IVxWqd4Rlh/87wNkRcVZEHM/sxNHdJQpFRDB7TrwvMz9aosaazLwhM7dn5gqzf9PXMrPY0TEzfww8ExHnzK+6CHisULmngQsjYut8n15E+ZOadwM751/vBL5UslhEXAJ8CLg8M39Vqk5mPpyZp2XmyvxnZT9wwfz/s7zMXOoHcCmzM6r/CdxYsM4fMXtK8RDwwPzj0h7+fX8C3NNDnT8Ads//fV8ETi5Y6x+Ax4FHgH8FfrvD+76D2bmEF5iF4T3A7zA7y//E/PMphes9yexc1NrPyadK1Vp3+1PAttI/K2sfMS8qqTLLftgvaUkMv1Qpwy9VyvBLlTL8UqUGE/6IuMZa1hpCvanWWm8w4Qf63AnWGletvutNtdYRhhR+ST3q9UU+27Zty5WVlaPetrq6yqmnntrLOqw1rlp91xtzrT179jyXmRu6wy2dVd2AlZUVdu/e3WdJqSoR8cONbttr+Nfs+MddPPc/zy/cbtuJx7P7by9u/D19G8MapTWtnvM3ff+9jQRk/XZNvqdvY1ijtKZx+Ht+/z1JHWtz5O/t/fckda9N+Jfy/nuSutEm/Bt6/72IuCYidkfE7tXV1RblJHWpTfg39P57mXlTZu7IzB19/l1Y0otrE/7e3n9PUvca/50/Mw9FxF8D/8ZsasutmfloZyuTVFSrF/lk5peBL3e0Fkk9Wkpjz7YTj9/0dk2+p29jWKO0ptfGnh07dqSv7ZfKiYg9mbljI9va0itVavKNPWNothnDGjU9Szny99nYM4ZmmzGsUdPjw36pUoZfqpThlypl+KVKGX6pUoZfqpThlypl+KVKTb6xZwzNNmNYo6bHxh5pQmzskbSQ4ZcqtZSuvib67uobeqfd0Nen4WszseeMiPh6ROyLiEcj4touF7Ze3119Q++0G/r6NHxtjvyHgA9k5t6IeDmwJyJ2ZeZjHa1NUkGNj/yZeSAz986//gWwDyf2SKPRyQm/iFgBzgfu7+L+JJXXOvwRcSLweeB9mfnzo9zuuC5pgFqFPyJewiz4t2fmXUfbxnFd0jC1OdsfwC3Avsz8aHdLktSHNkf+NwPvAt4aEQ/MPy7taF2SCmszq+/fOfqYbkkjMJqX9/bd1Tf0Truhr0/DZ1efNCF29UlaaDSNPU312dgzhmabMaxR/Zj8kb/Pxp4xNNuMYY3qx+TDL+noDL9UKcMvVcrwS5Uy/FKlDL9UKcMvVcrwS5WafPj7bOwZQ7PNGNaoftjYI02IjT2SFjL8UqWW0tU3hs6yPrv6hr4/hr4+NdPFW3cfFxHfjYh7Nvo9Y+gs67Orb+j7Y+jrUzNdPOy/ltm0Hkkj0vZ9+7cDbwdu7mY5kvrS9sj/ceA64NcdrEVSj9oM7bgMOJiZexZs57guaYDaDu24PCKeAj7HbHjHZ9dv5LguaZjajOi+ITO3Z+YKcBXwtcy8urOVSSrKF/lIlerkRT6Z+Q3gG13cl6R+LOXIP4bOsj67+oa+P4a+PjVjV580IXb1SVrI8EuVGs2svjF0ljkX8EhjWGPNRnPkH0NnmXMBm9W2G3A5RhN+Sd0y/FKlDL9UKcMvVcrwS5Uy/FKlDL9UKcMvVWo04R9DZ5lzAZvVthtwOezqkybErj5JC42msaepMTSXOBrsSGNY4xRM/sg/huYSR4M1q21DUDttJ/acFBF3RsTjEbEvIt7Y1cIkldX2Yf8ngK9m5p9HxPHA1g7WJKkHjcMfEa8A3gL8BUBmPg/4OEwaiTYP+18LrAKfno/ovjkiTli/keO6pGFqE/4twAXAJzPzfOCXwPXrN3JclzRMbcK/H9ifmffPL9/J7JeBpBFoM6vvx8AzEXHO/KqLgMc6WZWk4tqe7f8b4Pb5mf7vA3/ZfkmS+tDq7/yZ+cD8+fx5mXllZv5XVwvryhiaSxwN1qy2DUHt2NgjTYiNPZIWMvxSpSbf1dfU0DvLHA12pDGscWg88h/D0DvLHA3WrLadgL9h+KVKGX6pUoZfqpThlypl+KVKGX6pUoZfqpThlypl+I9h6J1ljgZrVttOwN+wq0+aELv6JC1kY0+HxtBc4miwI41hjaV45O/QGJpLHA3WrPYUG4Lajut6f0Q8GhGPRMQdEfHSrhYmqazG4Y+I04H3Ajsy81zgOOCqrhYmqay2D/u3AC+LiC3M5vT9qP2SJPWhzfv2Pwt8BHgaOAD8LDPvXb+d47qkYWrzsP9k4ArgLOA1wAkRcfX67RzXJQ1Tm4f9bwN+kJmrmfkCcBfwpm6WJam0NuF/GrgwIrZGRDAb17Wvm2VJKq3Nc/77mQ3n3As8PL+vmzpal6TC2o7r+vvMfH1mnpuZ78rM/+1qYWM0huYSR4M1qz3FhiAbe6QJsbFH0kKGX6qUXX0DMPTOsr67+qa6P4bGI/8ADL2zrO+uvqnuj6Ex/FKlDL9UKcMvVcrwS5Uy/FKlDL9UKcMvVcrwS5Uy/AMw9M6yvrv6pro/hsauPmlC7OqTtJDhlyplV99IjaGzrM+uvinvj1IWHvkj4taIOBgRjxx23SkRsSsinph/PrnsMrXeGDrL+uzqm/L+KGUjD/s/A1yy7rrrgfsy82zgvvllSSOyMPyZ+U3gp+uuvgK4bf71bcCVHa9LUmFNT/i9MjMPAMw/n9bdkiT1ofjZfmf1ScPUNPw/iYhXA8w/HzzWhs7qk4apafjvBnbOv94JfKmb5Ujqy0b+1HcH8C3gnIjYHxHvAf4JuDgingAunl+WNCILX+STme84xk0XdbwWST3y5b0jNYbOsj67+qa8P0qxq0+aELv6JC1kY09lhtZccjR9NvZMbX9shkf+ygytuaRN7S4ae6a6PzbC8EuVMvxSpQy/VCnDL1XK8EuVMvxSpQy/VCnDL1XK8FdmaM0lbWp30dgz1f2xETb2SBNiY4+khQy/VCm7+rTQ1DrfahgNthFNx3V9OCIej4iHIuILEXFS2WVqmabc+TbV0WAb0XRc1y7g3Mw8D/gecEPH65JUWKNxXZl5b2Yeml/8NrC9wNokFdTFCb93A1/p4H4k9ahV+CPiRuAQcPuLbOO4LmmAGoc/InYClwHvzBd5pZDjuqRhavSnvoi4BPgQ8MeZ+atulySpD03Hdf0z8HJgV0Q8EBGfKrxOSR1rOq7rlgJrkdQjX96rhabc+TbV0WAbYVefNCF29UlayMYeFTOGBpiaR4N55FcxY2iAqXk0mOGXKmX4pUoZfqlShl+qlOGXKmX4pUoZfqlShl+qlOFXMWNogKl5NJiNPdKE2NgjaSHDL1XKrj4NztC639bru6tvM9+3GY3GdR122wcjIiNi26aqSi9iaN1vTet21dVXan80HddFRJwBXAw8vamKkgah0biuuY8B1wH9/blAUmcanfCLiMuBZzPzwY7XI6knmz7hFxFbgRuBP93g9tcA1wCceeaZmy0nqZAmR/7XAWcBD0bEU8wm9O6NiFcdbWPHdUnDtOkjf2Y+DJy2dnn+C2BHZj7X4bokFdZ0XJekkWs6ruvw21c6W42k3vjyXg3O0Lrfmtbtqquv1P6wq0+aELv6JC1k+KVK2dWnSRh6JyCMsKtPGoOhdwJupvaQuvokTZDhlypl+KVKGX6pUoZfqpThlypl+KVKGX6pUoZfkzD0TsDN1J5kV19ErAI/PMbN24C+3g3IWuOq1Xe9Mdf63czc0Pvl9Rr+FxMRuzfaimitumr1XW+qtdbzYb9UKcMvVWpI4b/JWtYaSL2p1jrCYJ7zS+rXkI78knpk+KVKGX6pUoZfqpThlyr1f+8kvg9K9NHAAAAAAElFTkSuQmCC
+" /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="output_area"&gt;
+&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;Visualizing L:
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="output_area"&gt;
+&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_png output_subarea "&gt;
+&lt;img src="data:image/png;base64,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
+" /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="output_area"&gt;
+&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;Visualizing U:
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="output_area"&gt;
+&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_png output_subarea "&gt;
+&lt;img src="data:image/png;base64,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
+" /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="output_area"&gt;
+&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;Visualizing P:
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="output_area"&gt;
+&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_png output_subarea "&gt;
+&lt;img src="data:image/png;base64,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
+" /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="output_area"&gt;
+&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;Number of nonzero elements in L: 67
+Number of nonzero elements in U: 67
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;P is a permutation of the identity matrix; it's a record of all the row interchanges done in the LU factorization of A. Because P is the identity matrix exactly, we know no pivoting was involved in the LU factorization of A.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [39]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"The condition number of A is:"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;linalg&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cond&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"Visualizing the inverse of A:"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; 
+&lt;span class="n"&gt;Ainv&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;linalg&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;inv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; 
+&lt;span class="n"&gt;M&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sps&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;csr_matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Ainv&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;spy&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;transpose&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"The solution to Ax=b is:"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;linalg&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;solve&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+&lt;div class="output_area"&gt;
+&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;The condition number of A is: 16.0714224244
+Visualizing the inverse of A:
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="output_area"&gt;
+&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_png output_subarea "&gt;
+&lt;img src="data:image/png;base64,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
+" /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="output_area"&gt;
+&lt;div class="prompt"&gt;&lt;/div&gt;
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;The solution to Ax=b is: [  5.62036177e-18   2.24814471e-17   8.43054266e-17   3.71845032e-17
+   0.00000000e+00   1.00000000e+00   1.00000000e+00   5.82244940e-17
+   0.00000000e+00   1.00000000e+00   1.00000000e+00  -2.95997226e-17
+  -4.42570117e-17  -8.60995600e-17  -3.37085073e-17  -1.58270575e-17]
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;The inverse of A is extremely dense; there are lots of non-zero elements.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: 'center'," +
+        "    displayIndent: '0em'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['$','$'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        " linebreaks: { automatic: true, width: '95% container' }, " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+        "    } " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;
+</summary><category term="python firsts"></category></entry></feed>
